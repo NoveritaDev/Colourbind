@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dlvi7d34rughx"]
+
+[ext_resource type="Script" uid="uid://dwkpa5bie66xs" path="res://assets/simulated_cvd_shaders/change_cvd_mode.gd" id="1_ad0pq"]
+[ext_resource type="Shader" uid="uid://lqowtwjdxdfk" path="res://assets/simulated_cvd_shaders/multi_cvd.gdshader" id="2_rkinu"]
+[ext_resource type="Texture2D" uid="uid://qefi3tng0o71" path="res://assets/textures/visible_spectrum.png" id="3_ad0pq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wbwik"]
+shader = ExtResource("2_rkinu")
+shader_parameter/cvd_type = 0
+
+[node name="SceneRoot" type="Node2D" unique_id=1299182875]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1053479758]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=586887646]
+layer = 128
+script = ExtResource("1_ad0pq")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer" unique_id=604185413]
+material = SubResource("ShaderMaterial_wbwik")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VisibleSpectrum" type="Sprite2D" parent="." unique_id=2130108793]
+position = Vector2(1, 169)
+texture = ExtResource("3_ad0pq")
