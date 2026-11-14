@@ -3,6 +3,7 @@ extends Node2D
 
 static var GRID : Grid
 
+# List of colors, NONE is there for non-colored gameobjects
 enum OBJ_COLOR { # We can add more colors, just this for now
 	NONE,
 	RED,
@@ -10,6 +11,7 @@ enum OBJ_COLOR { # We can add more colors, just this for now
 	GREEN
 }
 
+# Where color objects get mapped to actual colors
 var color_dict : Dictionary[OBJ_COLOR, Color] = {
 	OBJ_COLOR.NONE: Color.WHITE,
 	OBJ_COLOR.RED: Color.RED,
@@ -22,4 +24,3 @@ var color_dict : Dictionary[OBJ_COLOR, Color] = {
 
 func _ready() -> void:
 	modulate = color_dict[color]
-	print(modulate)

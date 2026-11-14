@@ -8,6 +8,7 @@ extends Node2D
 @export_range(1, 1024) var grid_width : int = 16
 @export_range(1, 1024) var grid_height : int = 16
 @export_range(1, 256) var tile_size : int = 64
+@warning_ignore("integer_division")
 @onready var tile_offset := tile_size / 2
 
 signal s_box_moved
@@ -106,8 +107,11 @@ func push(pos: Vector2i, dir: Vector2i, max_recurs: int) -> bool:
 	# Starts at player next position and goes until reaching a stop cell
 
 func load_grid() -> void:
-	for i in range(grid_width * grid_height):
-		grid.append(Cell.new())
+	for i in range(grid_height):
+		for j in range(grid_width):
+			grid.append(Cell.new())
+			if $Walls.get_cell_tile_data(Vector2i(i, j)):
+				grid[index(Vector2i(i, j))].stop = true
 
 # Loads all children of the grid object into the grid array
 func load_grid_objs() -> void:
