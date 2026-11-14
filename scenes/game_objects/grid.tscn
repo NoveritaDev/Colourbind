@@ -4,3 +4,8 @@
 
 [node name="Grid" type="Node2D" unique_id=2044820807]
 script = ExtResource("1_sr5c7")
+
+[node name="Background" type="ColorRect" parent="." unique_id=978619325]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)

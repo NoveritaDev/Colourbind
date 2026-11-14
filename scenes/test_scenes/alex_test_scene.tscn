@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://duwlemmcyb5i5"]
+
+[ext_resource type="PackedScene" uid="uid://57xo3k2lm642" path="res://scenes/game_objects/grid.tscn" id="1_qqs75"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="2_dduva"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="3_dduva"]
+
+[node name="AlexTestScene" type="Node2D" unique_id=615450944]
+
+[node name="Grid" parent="." unique_id=2044820807 instance=ExtResource("1_qqs75")]
+grid_height = 9
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("2_dduva")]
+position = Vector2(96, 96)
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("3_dduva")]
+position = Vector2(416, 352)
+
+[node name="Box2" parent="Grid" unique_id=1267091128 instance=ExtResource("3_dduva")]
+position = Vector2(736, 288)
+
+[node name="Box3" parent="Grid" unique_id=1350866676 instance=ExtResource("3_dduva")]
+position = Vector2(288, 224)
+color = 1
