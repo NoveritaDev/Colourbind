@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://cuqomjcc84dsx"]
 
-[ext_resource type="Script" uid="uid://bf5gmevl5olyt" path="res://scenes/game_objects/game_object.gd" id="1_761wl"]
+[ext_resource type="Script" uid="uid://6u7smwwwwxul" path="res://scenes/game_objects/box.gd" id="1_761wl"]
 [ext_resource type="Texture2D" uid="uid://coey3sdq30sxi" path="res://assets/textures/WhiteSquare.png" id="2_11yiq"]
 
 [node name="Box" type="Node2D" unique_id=874453324]
+texture_filter = 1
 script = ExtResource("1_761wl")
-color = 2
-pushable = true
 metadata/_custom_type_script = "uid://bf5gmevl5olyt"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=657374925]

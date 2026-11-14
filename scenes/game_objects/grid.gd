@@ -10,6 +10,8 @@ extends Node2D
 @export_range(1, 256) var tile_size : int = 64
 @onready var tile_offset := tile_size / 2
 
+signal s_box_moved
+
 class Cell:
 	var objs: Array[GameObject]
 	var stop: bool
@@ -65,39 +67,43 @@ func move(obj: GameObject, new_pos: Vector2i) -> void:
 	obj.position = grid_to_world(new_pos)
 
 # Recursive function to handle pushing "trains" of blocks
-func push(pos: Vector2i, dir: Vector2i) -> bool:
-	print("current pos %s" % pos) #**
-	print("next pos %s" % (pos + dir)) #**
+# max_iters functions as the maximum boxes that can be pushed at once (-1 for infinite)
+func push(pos: Vector2i, dir: Vector2i, max_recurs: int) -> bool:
 	if dir.length() != 1:
 		print("Given push direction does not have a magnitude of 1")
 		return false
 	
-	if get_at(pos + dir) == null || get_at(pos + dir).stop:
-		print("Could not push, wall at %s" % (pos + dir))
+	if get_at(pos) == null || get_at(pos).stop:
+		print("Could not push, wall at %s" % pos)
 		return false
 	
 	var pushable_at_pos := false
-	for obj in get_at(pos + dir).objs:
-		if obj.pushable:
+	for obj in get_at(pos).objs:
+		if obj is Pushable:
 			pushable_at_pos = true
 			break
 	
-	if pushable_at_pos && !push(pos + dir, dir):
-		return false
+	if pushable_at_pos:
+		if max_recurs == 0:
+			print("Cannot push more than %d box(es)" % Pushable.MAX_PUSH_COUNT)
+			return false
+		if !push(pos + dir, dir, max_recurs - 1):
+			return false
 	
 	for obj in get_at(pos).objs:
-		print("?") #**
-		if obj.pushable:
-			print(obj) #**
-			print(pos + dir)
+		if obj is Pushable:
 			move(obj, pos + dir)
+	
+	# Only emit the signal to check at the end of the recursion
+	if max_recurs == Pushable.MAX_PUSH_COUNT:
+		s_box_moved.emit()
 	
 	return true
 	
 	# Recursively check if next tile is pushable to
 	# Any empty space cascades back pushing all objects forward
 	# Any blocked space cascades back halting all object movement
-	# Starts at player position and moves to the last position before a stop cell
+	# Starts at player next position and goes until reaching a stop cell
 
 func load_grid() -> void:
 	for i in range(grid_width * grid_height):
@@ -111,17 +117,11 @@ func load_grid_objs() -> void:
 			place_at(child, pos)
 			child.position = grid_to_world(pos) # Move the object to the nearest grid position
 
+func _enter_tree() -> void:
+	GameObject.GRID = self
 
 func _ready() -> void:
-	GameObject.GRID = self
 	$Background.size = Vector2i(grid_width * tile_size, grid_height * tile_size)
 	$Background.position = position
 	load_grid()
 	load_grid_objs()
-
-
-func test() -> void:
-	for i in range(grid_width):
-		for j in range(grid_height):
-			if i == 0 || j == 0:
-				get_at(Vector2i(i, j)).stop = true

@@ -18,8 +18,8 @@ var color_dict : Dictionary[OBJ_COLOR, Color] = {
 }
 
 @export var color : OBJ_COLOR
-@export var pushable : bool
 
 
 func _ready() -> void:
 	modulate = color_dict[color]
+	print(modulate)

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d28b4nu3hm2ji"]
+
+[ext_resource type="Script" uid="uid://yw5pxikgqrqy" path="res://scenes/game_objects/button.gd" id="1_ybjr1"]
+[ext_resource type="Texture2D" uid="uid://8g4q2brr2s1c" path="res://assets/textures/WhiteCircle.png" id="2_5ktqh"]
+
+[node name="Button" type="Node2D" unique_id=1203081120]
+script = ExtResource("1_ybjr1")
+metadata/_custom_type_script = "uid://bf5gmevl5olyt"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=766157425]
+texture_filter = 1
+texture = ExtResource("2_5ktqh")

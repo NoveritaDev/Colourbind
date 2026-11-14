@@ -4,7 +4,7 @@ extends GameObject
 
 func move(dir: Vector2i) -> void:
 	var pos := GRID.world_to_grid(position)
-	if GRID.push(pos, dir):
+	if GRID.push(pos + dir, dir, Pushable.MAX_PUSH_COUNT):
 		GRID.move(self, pos + dir)
 
 	 
