@@ -12,12 +12,14 @@ extends Node2D
 @onready var tile_offset := tile_size / 2
 
 signal s_box_moved
+signal s_level_won
 
 class Cell:
 	var objs: Array[GameObject]
 	var stop: bool
 
 var grid : Array[Cell]
+var buttons : Array[PushButton]
 
 # Converts positions to 1D Array format
 func index(pos: Vector2i) -> int:
@@ -107,11 +109,11 @@ func push(pos: Vector2i, dir: Vector2i, max_recurs: int) -> bool:
 	# Starts at player next position and goes until reaching a stop cell
 
 func load_grid() -> void:
-	for i in range(grid_height):
-		for j in range(grid_width):
+	for y in range(grid_height):
+		for x in range(grid_width):
 			grid.append(Cell.new())
-			if $Walls.get_cell_tile_data(Vector2i(i, j)):
-				grid[index(Vector2i(i, j))].stop = true
+			if $Walls.get_cell_tile_data(Vector2i(x, y)):
+				grid[index(Vector2i(x, y))].stop = true
 
 # Loads all children of the grid object into the grid array
 func load_grid_objs() -> void:
@@ -120,6 +122,16 @@ func load_grid_objs() -> void:
 			var pos := world_to_grid(child.position)
 			place_at(child, pos)
 			child.position = grid_to_world(pos) # Move the object to the nearest grid position
+			if child is PushButton && child.color != GameObject.OBJ_COLOR.NONE:
+				buttons.append(child)
+				child.s_activation.connect(check_win.unbind(1))
+
+func check_win() -> void:
+	for button in buttons:
+		if !button.activated:
+			return
+	print("Level complete!")
+	s_level_won.emit()
 
 func _enter_tree() -> void:
 	GameObject.GRID = self
