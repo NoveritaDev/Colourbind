@@ -1,7 +1,7 @@
 class_name Pushable
 extends GameObject
 
-static var MAX_PUSH_COUNT = 2 # -1 means infinite boxes
+static var MAX_PUSH_COUNT = 1 # -1 means infinite boxes
 
 func _ready() -> void:
 	super._ready()
