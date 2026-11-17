@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Colourbind"
-run/main_scene="uid://duwlemmcyb5i5"
+run/main_scene="uid://q5gjwqygcn4k"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LevelManager="*uid://c44g5c4j43ay0"
 
 [display]
 

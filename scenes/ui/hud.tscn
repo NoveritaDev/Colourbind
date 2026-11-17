@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c8tvnqlumv3n7"]
+
+[ext_resource type="Texture2D" uid="uid://py18m2gmbsm7" path="res://assets/textures/settings.png" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://dcd5o5ffi26lo" path="res://scenes/ui/hud.gd" id="1_bo48s"]
+[ext_resource type="PackedScene" uid="uid://b5g85q54i6dk0" path="res://scenes/ui/settings_menu.tscn" id="2_hqnrr"]
+
+[node name="HUD" type="CanvasLayer" unique_id=446530125]
+process_mode = 3
+script = ExtResource("1_bo48s")
+
+[node name="Control" type="Control" parent="." unique_id=1722405454]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SettingsButton" type="Button" parent="Control" unique_id=537099173]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+icon = ExtResource("1_0mwgc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SettingsMenu" parent="Control" unique_id=1737992732 instance=ExtResource("2_hqnrr")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Control/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="home_pressed" from="Control/SettingsMenu" to="." method="_on_settings_menu_home_pressed"]
+[connection signal="next_level_pressed" from="Control/SettingsMenu" to="." method="_on_settings_menu_next_level_pressed"]
+[connection signal="restart_pressed" from="Control/SettingsMenu" to="." method="_on_settings_menu_restart_pressed"]
