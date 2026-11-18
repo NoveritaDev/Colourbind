@@ -23,17 +23,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_nsphw")]
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAMAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAAAAQAAAAAAAAAGAAcAAQAAAAAAAAAFAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAADAAcAAQAAAAAAAAACAAcAAQAAAAAAAAABAAcAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAFAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAABAAYAAQAAAAAAAAA=")
 
-[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_7vfie")]
-position = Vector2(224, 93)
-
-[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_v64ir")]
-position = Vector2(225, 409)
-color = 2
-
-[node name="Button2" parent="Grid" unique_id=2114804485 instance=ExtResource("3_v64ir")]
-position = Vector2(227, 343)
-color = 1
-
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_w73a1")]
 position = Vector2(228, 274)
 color = 2
@@ -41,5 +30,16 @@ color = 2
 [node name="Box2" parent="Grid" unique_id=1501728900 instance=ExtResource("5_w73a1")]
 position = Vector2(226, 214)
 color = 1
+
+[node name="Button2" parent="Grid" unique_id=2114804485 instance=ExtResource("3_v64ir")]
+position = Vector2(227, 343)
+color = 1
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_v64ir")]
+position = Vector2(225, 409)
+color = 2
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_7vfie")]
+position = Vector2(224, 93)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_tc44x")]

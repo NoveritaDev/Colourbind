@@ -22,17 +22,6 @@ color = Color(0.23031491, 0.23031494, 0.23031494, 1)
 [node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_1jnh5")]
 tile_map_data = PackedByteArray("AAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAEAAQAAAAAAAAABAAYAAQAAAAAAAAACAAAAAQAAAAAAAAACAAcAAQAAAAAAAAAGAAAAAQAAAAAAAAAGAAcAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAIAAQAAAAAAAAABAAcAAQAAAAAAAAACAAEAAQAAAAAAAAACAAgAAQAAAAAAAAADAAAAAQAAAAAAAAADAAMAAQAAAAAAAAADAAUAAQAAAAAAAAADAAgAAQAAAAAAAAAEAAAAAQAAAAAAAAAEAAgAAQAAAAAAAAAFAAAAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAUAAQAAAAAAAAAFAAgAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAgAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAcAAQAAAAAAAAAIAAYAAQAAAAAAAAA=")
 
-[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_jgt0v")]
-position = Vector2(480, 283)
-color = 3
-
-[node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_jgt0v")]
-position = Vector2(92, 288)
-color = 2
-
-[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_hvqp8")]
-position = Vector2(287, 225)
-
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_8w8tq")]
 position = Vector2(285, 346)
 color = 2
@@ -41,12 +30,23 @@ color = 2
 position = Vector2(354, 292)
 color = 1
 
+[node name="Box3" parent="Grid" unique_id=674441133 instance=ExtResource("5_8w8tq")]
+position = Vector2(222, 286)
+color = 3
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_jgt0v")]
+position = Vector2(480, 283)
+color = 3
+
+[node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_jgt0v")]
+position = Vector2(92, 288)
+color = 2
+
 [node name="Button3" parent="Grid" unique_id=506749543 instance=ExtResource("3_jgt0v")]
 position = Vector2(287, 481)
 color = 1
 
-[node name="Box3" parent="Grid" unique_id=674441133 instance=ExtResource("5_8w8tq")]
-position = Vector2(222, 286)
-color = 3
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_hvqp8")]
+position = Vector2(287, 225)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_foqc1")]

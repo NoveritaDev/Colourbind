@@ -22,27 +22,8 @@ color = Color(0.23031491, 0.23031494, 0.23031494, 1)
 [node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_cw75u")]
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAAIAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAIAAEAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAABAAIAAQAAAAAAAAABAAEAAQAAAAAAAAAFAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAADAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAA=")
 
-[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_gkpor")]
-position = Vector2(541, 288)
-color = 3
-
-[node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_gkpor")]
-position = Vector2(92, 288)
-color = 1
-
-[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_a0uur")]
-position = Vector2(341, 299)
-
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_yy4na")]
 position = Vector2(221, 346)
-color = 3
-
-[node name="Button3" parent="Grid" unique_id=506749543 instance=ExtResource("3_gkpor")]
-position = Vector2(96, 357)
-color = 1
-
-[node name="Button4" parent="Grid" unique_id=101407547 instance=ExtResource("3_gkpor")]
-position = Vector2(544, 352)
 color = 3
 
 [node name="Box2" parent="Grid" unique_id=1129021981 instance=ExtResource("5_yy4na")]
@@ -65,6 +46,22 @@ color = 2
 position = Vector2(279, 230)
 color = 2
 
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_gkpor")]
+position = Vector2(541, 288)
+color = 3
+
+[node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_gkpor")]
+position = Vector2(92, 288)
+color = 1
+
+[node name="Button3" parent="Grid" unique_id=506749543 instance=ExtResource("3_gkpor")]
+position = Vector2(96, 357)
+color = 1
+
+[node name="Button4" parent="Grid" unique_id=101407547 instance=ExtResource("3_gkpor")]
+position = Vector2(544, 352)
+color = 3
+
 [node name="Button5" parent="Grid" unique_id=531561248 instance=ExtResource("3_gkpor")]
 position = Vector2(347, 356)
 color = 2
@@ -72,5 +69,8 @@ color = 2
 [node name="Button6" parent="Grid" unique_id=382950479 instance=ExtResource("3_gkpor")]
 position = Vector2(281, 349)
 color = 2
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_a0uur")]
+position = Vector2(341, 299)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_07dqf")]
