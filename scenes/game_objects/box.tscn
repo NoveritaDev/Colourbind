@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://6u7smwwwwxul" path="res://scenes/game_objects/box.gd" id="1_761wl"]
 [ext_resource type="Texture2D" uid="uid://coey3sdq30sxi" path="res://assets/textures/WhiteSquare.png" id="2_11yiq"]
+[ext_resource type="Shader" uid="uid://bd84h6hart1b0" path="res://assets/simulated_cvd_shaders/lms_tint.gdshader" id="2_hac0c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_11yiq"]
+shader = ExtResource("2_hac0c")
+shader_parameter/albedo_tex = ExtResource("2_11yiq")
 
 [node name="Box" type="Node2D" unique_id=874453324]
 texture_filter = 1
 script = ExtResource("1_761wl")
 metadata/_custom_type_script = "uid://bf5gmevl5olyt"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=657374925]
+[node name="s" type="Sprite2D" parent="." unique_id=657374925]
+material = SubResource("ShaderMaterial_11yiq")
 texture = ExtResource("2_11yiq")

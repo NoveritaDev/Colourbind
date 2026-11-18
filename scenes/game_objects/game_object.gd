@@ -13,10 +13,10 @@ enum OBJ_COLOR { # We can add more colors, just this for now
 
 # Where color objects get mapped to actual colors
 var color_dict : Dictionary[OBJ_COLOR, Color] = {
-	OBJ_COLOR.NONE: Color.WHITE,
-	OBJ_COLOR.RED: Color.RED,
-	OBJ_COLOR.BLUE: Color.BLUE,
-	OBJ_COLOR.GREEN: Color.GREEN
+	OBJ_COLOR.NONE: Color(1,1,1),
+	OBJ_COLOR.RED: Color(0.314,0.155,0.018),
+	OBJ_COLOR.BLUE: Color(0.046500889, 0.086707664, 0.872632109),
+	OBJ_COLOR.GREEN: Color(0.639540462, 0.757927085, 0.109446836)
 }
 
 @export var color : OBJ_COLOR
