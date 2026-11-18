@@ -1,0 +1,76 @@
+[gd_scene format=4 uid="uid://bk6k7jxmqbck0"]
+
+[ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="1_ypi4k"]
+[ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="2_cw75u"]
+[ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="3_gkpor"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="4_a0uur"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_yy4na"]
+[ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_07dqf"]
+
+[node name="Level01" type="Node2D" unique_id=615450944]
+
+[node name="Grid" type="Node2D" parent="." unique_id=2044820807]
+script = ExtResource("1_ypi4k")
+grid_width = 11
+grid_height = 10
+
+[node name="Background" type="ColorRect" parent="Grid" unique_id=978619325]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+
+[node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_cw75u")]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAAIAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAIAAEAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAABAAIAAQAAAAAAAAABAAEAAQAAAAAAAAAFAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAADAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAA=")
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_gkpor")]
+position = Vector2(541, 288)
+color = 3
+
+[node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_gkpor")]
+position = Vector2(92, 288)
+color = 1
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_a0uur")]
+position = Vector2(341, 299)
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_yy4na")]
+position = Vector2(221, 346)
+color = 3
+
+[node name="Button3" parent="Grid" unique_id=506749543 instance=ExtResource("3_gkpor")]
+position = Vector2(96, 357)
+color = 1
+
+[node name="Button4" parent="Grid" unique_id=101407547 instance=ExtResource("3_gkpor")]
+position = Vector2(544, 352)
+color = 3
+
+[node name="Box2" parent="Grid" unique_id=1129021981 instance=ExtResource("5_yy4na")]
+position = Vector2(219, 281)
+color = 3
+
+[node name="Box3" parent="Grid" unique_id=173298822 instance=ExtResource("5_yy4na")]
+position = Vector2(407, 348)
+color = 1
+
+[node name="Box4" parent="Grid" unique_id=205159485 instance=ExtResource("5_yy4na")]
+position = Vector2(407, 287)
+color = 1
+
+[node name="Box5" parent="Grid" unique_id=292138077 instance=ExtResource("5_yy4na")]
+position = Vector2(348, 230)
+color = 2
+
+[node name="Box6" parent="Grid" unique_id=377790754 instance=ExtResource("5_yy4na")]
+position = Vector2(279, 230)
+color = 2
+
+[node name="Button5" parent="Grid" unique_id=531561248 instance=ExtResource("3_gkpor")]
+position = Vector2(347, 356)
+color = 2
+
+[node name="Button6" parent="Grid" unique_id=382950479 instance=ExtResource("3_gkpor")]
+position = Vector2(281, 349)
+color = 2
+
+[node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_07dqf")]
