@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="4_hvqp8"]
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_8w8tq"]
 [ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_foqc1"]
+[ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="7_1jnh5"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
 
@@ -50,3 +51,5 @@ color = 1
 position = Vector2(287, 225)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_foqc1")]
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_1jnh5")]

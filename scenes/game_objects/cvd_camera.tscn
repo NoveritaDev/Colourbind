@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://2gww3woy0ukh"]
+
+[ext_resource type="Script" uid="uid://dwkpa5bie66xs" path="res://assets/simulated_cvd_shaders/change_cvd_mode.gd" id="1_t8wgq"]
+[ext_resource type="Shader" uid="uid://lqowtwjdxdfk" path="res://assets/simulated_cvd_shaders/multi_cvd.gdshader" id="2_e6tpy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ijgl7"]
+shader = ExtResource("2_e6tpy")
+shader_parameter/cvd_type = 0
+
+[node name="CvdCamera" type="Node2D" unique_id=1028353294]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1558107631]
+position = Vector2(576, 324)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=513434503]
+layer = 128
+script = ExtResource("1_t8wgq")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer" unique_id=1813054796]
+material = SubResource("ShaderMaterial_ijgl7")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

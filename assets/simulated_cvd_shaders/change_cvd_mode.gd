@@ -1,8 +1,13 @@
 extends CanvasLayer
 
 @onready var filter_rect: ColorRect = $ColorRect
-var current_mode: int = 0
+var current_mode: int = 1
 const MODE_NAMES := ["Typical", "Protanopia", "Deuteranopia", "Tritanopia", "Achromatopsia", "S-Cone Isolation"]
+
+func _ready() -> void:
+	var mat := filter_rect.material as ShaderMaterial
+	if mat:
+		mat.set_shader_parameter("cvd_type", current_mode)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
