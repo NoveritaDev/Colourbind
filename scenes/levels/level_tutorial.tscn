@@ -1,0 +1,45 @@
+[gd_scene format=4 uid="uid://tmtkuajqvga2"]
+
+[ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="1_w73a1"]
+[ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="2_nsphw"]
+[ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="3_v64ir"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="4_7vfie"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_w73a1"]
+[ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_tc44x"]
+
+[node name="Level01" type="Node2D" unique_id=615450944]
+
+[node name="Grid" type="Node2D" parent="." unique_id=2044820807]
+script = ExtResource("1_w73a1")
+grid_width = 11
+grid_height = 10
+
+[node name="Background" type="ColorRect" parent="Grid" unique_id=978619325]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_nsphw")]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAUAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAMAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAAAAQAAAAAAAAAGAAcAAQAAAAAAAAAFAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAADAAcAAQAAAAAAAAACAAcAAQAAAAAAAAABAAcAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAFAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAFAAYAAQAAAAAAAAABAAYAAQAAAAAAAAA=")
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_7vfie")]
+position = Vector2(224, 93)
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_v64ir")]
+position = Vector2(225, 409)
+color = 2
+
+[node name="Button2" parent="Grid" unique_id=2114804485 instance=ExtResource("3_v64ir")]
+position = Vector2(227, 343)
+color = 1
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_w73a1")]
+position = Vector2(228, 274)
+color = 2
+
+[node name="Box2" parent="Grid" unique_id=1501728900 instance=ExtResource("5_w73a1")]
+position = Vector2(226, 214)
+color = 1
+
+[node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_tc44x")]
