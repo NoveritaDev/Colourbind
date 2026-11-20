@@ -27,51 +27,51 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAA
 
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_yy4na")]
 position = Vector2(221, 346)
-color = 3
+color = 5
 
 [node name="Box2" parent="Grid" unique_id=1129021981 instance=ExtResource("5_yy4na")]
 position = Vector2(219, 281)
-color = 3
+color = 5
 
 [node name="Box3" parent="Grid" unique_id=173298822 instance=ExtResource("5_yy4na")]
 position = Vector2(407, 348)
-color = 1
+color = 6
 
 [node name="Box4" parent="Grid" unique_id=205159485 instance=ExtResource("5_yy4na")]
 position = Vector2(407, 287)
-color = 1
+color = 6
 
 [node name="Box5" parent="Grid" unique_id=292138077 instance=ExtResource("5_yy4na")]
 position = Vector2(348, 230)
-color = 2
+color = 3
 
 [node name="Box6" parent="Grid" unique_id=377790754 instance=ExtResource("5_yy4na")]
 position = Vector2(279, 230)
-color = 2
+color = 3
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_gkpor")]
 position = Vector2(541, 288)
-color = 3
+color = 5
 
 [node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_gkpor")]
 position = Vector2(92, 288)
-color = 1
+color = 6
 
 [node name="Button3" parent="Grid" unique_id=506749543 instance=ExtResource("3_gkpor")]
 position = Vector2(96, 357)
-color = 1
+color = 6
 
 [node name="Button4" parent="Grid" unique_id=101407547 instance=ExtResource("3_gkpor")]
 position = Vector2(544, 352)
-color = 3
+color = 5
 
 [node name="Button5" parent="Grid" unique_id=531561248 instance=ExtResource("3_gkpor")]
 position = Vector2(347, 356)
-color = 2
+color = 3
 
 [node name="Button6" parent="Grid" unique_id=382950479 instance=ExtResource("3_gkpor")]
 position = Vector2(281, 349)
-color = 2
+color = 3
 
 [node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_a0uur")]
 position = Vector2(341, 299)

@@ -30,11 +30,11 @@ color = 2
 
 [node name="Box2" parent="Grid" unique_id=1501728900 instance=ExtResource("5_w73a1")]
 position = Vector2(226, 214)
-color = 1
+color = 4
 
 [node name="Button2" parent="Grid" unique_id=2114804485 instance=ExtResource("3_v64ir")]
 position = Vector2(227, 343)
-color = 1
+color = 4
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_v64ir")]
 position = Vector2(225, 409)
