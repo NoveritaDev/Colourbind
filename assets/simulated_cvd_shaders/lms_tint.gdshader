@@ -1,6 +1,10 @@
 shader_type canvas_item;
 
 uniform sampler2D albedo_tex : source_color;
+uniform sampler2D pattern_tex_1 : source_color, hint_default_transparent, repeat_enable;
+uniform sampler2D pattern_tex_2 : source_color, hint_default_transparent, repeat_enable;
+
+instance uniform int pattern_index = 0;
 instance uniform vec3 tint = vec3(1.0, 1.0, 1.0);
 
 // https://mk.bcgsc.ca/colorblind/math.mhtml
@@ -62,7 +66,22 @@ vec3 linear_to_srgb(vec3 c) {
 void fragment() {
 	// Called for every pixel the material is visible on.
 	vec4 tex_colour = texture(albedo_tex, UV);
-	vec3 srgb_colour = tex_colour.rgb;
+	
+	vec4 pattern_colour;
+	if (pattern_index == 1) {
+		pattern_colour = texture(pattern_tex_1, UV * .75);
+	}
+	else if (pattern_index == 2) {
+		pattern_colour = texture(pattern_tex_2, UV);
+	}
+	else {
+		pattern_colour = vec4(0);
+	}
+	
+	vec3 pattern_colour_adj = .5 * (vec3(1) - pattern_colour.rgb);
+	
+	//vec3 srgb_colour = tex_colour.rgb;
+	vec3 srgb_colour = mix(tex_colour.rgb, pattern_colour_adj, pattern_colour.a);
 	
 	vec3 linear_rgb_colour = srgb_to_linear(srgb_colour);
 	vec3 xyz_colour = linear_to_xyz(linear_rgb_colour);

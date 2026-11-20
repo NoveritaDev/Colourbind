@@ -26,6 +26,17 @@ var color_dict : Dictionary[OBJ_COLOR, Color] = {
 	OBJ_COLOR.PINK: Color(0.847, 0.604, 0.651)
 }
 
+var pattern_dict : Dictionary[OBJ_COLOR, int] = {
+	OBJ_COLOR.NONE: 0,
+	OBJ_COLOR.RED: 0,
+	OBJ_COLOR.BLUE: 1,
+	OBJ_COLOR.GREEN: 2, # Change to other pattern
+	
+	OBJ_COLOR.CYAN: 0,
+	OBJ_COLOR.GREY: 1,
+	OBJ_COLOR.PINK: 2,
+}
+
 @export var color : OBJ_COLOR
 
 

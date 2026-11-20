@@ -18,8 +18,10 @@ func _update_tint() -> void:
 	if is_instance_valid(sprite):
 		if override_tint:
 			sprite.set_instance_shader_parameter("tint", lms_tint)
+			sprite.set_instance_shader_parameter("pattern_index", 0)
 		else:
 			sprite.set_instance_shader_parameter("tint", color_dict[color])
+			sprite.set_instance_shader_parameter("pattern_index", pattern_dict[color])
 
 signal s_activation(change: bool)
 

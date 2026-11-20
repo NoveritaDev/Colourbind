@@ -3,10 +3,14 @@
 [ext_resource type="Script" uid="uid://6u7smwwwwxul" path="res://scenes/game_objects/box.gd" id="1_761wl"]
 [ext_resource type="Texture2D" uid="uid://coey3sdq30sxi" path="res://assets/textures/WhiteSquare.png" id="2_11yiq"]
 [ext_resource type="Shader" uid="uid://bd84h6hart1b0" path="res://assets/simulated_cvd_shaders/lms_tint.gdshader" id="2_hac0c"]
+[ext_resource type="Texture2D" uid="uid://hmatqv22kyoj" path="res://assets/textures/patterns/dots_texture.svg" id="4_hac0c"]
+[ext_resource type="Texture2D" uid="uid://s7u1j812c01i" path="res://assets/textures/patterns/hatching.svg" id="5_5xfmd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11yiq"]
 shader = ExtResource("2_hac0c")
 shader_parameter/albedo_tex = ExtResource("2_11yiq")
+shader_parameter/pattern_tex_1 = ExtResource("4_hac0c")
+shader_parameter/pattern_tex_2 = ExtResource("5_5xfmd")
 
 [node name="Box" type="Node2D" unique_id=874453324]
 texture_filter = 1
