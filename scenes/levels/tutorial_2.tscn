@@ -1,0 +1,47 @@
+[gd_scene format=4 uid="uid://b504gvgylejsv"]
+
+[ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="1_htkxo"]
+[ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="2_p23lr"]
+[ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="3_y53a8"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="4_cw8ci"]
+[ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="5_wdx56"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="6_xh4mi"]
+[ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="7_2eey3"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="8_51qki"]
+[ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_1f7ls"]
+[ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_xdv4t"]
+
+[node name="Tutorial2" type="Node2D" unique_id=1450122907]
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("1_htkxo")]
+
+[node name="Grid" type="Node2D" parent="." unique_id=800172707]
+script = ExtResource("2_p23lr")
+grid_width = 11
+grid_height = 10
+
+[node name="Background" type="ColorRect" parent="Grid" unique_id=1377399990]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("3_y53a8")]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAGAAMAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAADAAEAAQAAAAAAAAA=")
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("4_cw8ci")]
+position = Vector2(352, 158)
+color = 1
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("5_wdx56")]
+position = Vector2(162, 163)
+color = 1
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("6_xh4mi")]
+position = Vector2(95, 160)
+
+[node name="HUD" parent="." unique_id=446530125 instance=ExtResource("7_2eey3")]
+
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("8_51qki")]
+colour_1 = ExtResource("9_1f7ls")
+colour_2 = ExtResource("10_xdv4t")
