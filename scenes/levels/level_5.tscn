@@ -7,8 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_8w8tq"]
 [ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_foqc1"]
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="7_1jnh5"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="8_dwyms"]
+[ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_6xwso"]
+[ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_5ke18"]
+[ext_resource type="Material" uid="uid://bqsdrlcsl08jx" path="res://assets/materials/colour_3.tres" id="11_j14br"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_1jnh5")]
 
 [node name="Grid" type="Node2D" parent="." unique_id=2044820807]
 script = ExtResource("1_r8ojw")
@@ -25,31 +31,34 @@ tile_map_data = PackedByteArray("AAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAA
 
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_8w8tq")]
 position = Vector2(285, 346)
-color = 4
+color = 1
 
 [node name="Box2" parent="Grid" unique_id=1267091128 instance=ExtResource("5_8w8tq")]
 position = Vector2(354, 292)
-color = 6
+color = 3
 
 [node name="Box3" parent="Grid" unique_id=674441133 instance=ExtResource("5_8w8tq")]
 position = Vector2(222, 286)
-color = 5
+color = 2
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_jgt0v")]
 position = Vector2(480, 283)
-color = 5
+color = 2
 
 [node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_jgt0v")]
 position = Vector2(92, 288)
-color = 4
+color = 1
 
 [node name="Button3" parent="Grid" unique_id=506749543 instance=ExtResource("3_jgt0v")]
 position = Vector2(287, 481)
-color = 6
+color = 3
 
 [node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_hvqp8")]
 position = Vector2(287, 225)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_foqc1")]
 
-[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_1jnh5")]
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("8_dwyms")]
+colour_1 = ExtResource("9_6xwso")
+colour_2 = ExtResource("10_5ke18")
+colour_3 = ExtResource("11_j14br")

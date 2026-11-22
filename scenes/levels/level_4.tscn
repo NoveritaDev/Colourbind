@@ -1,7 +1,10 @@
 [gd_scene format=4 uid="uid://dxi0ykf6a7u3g"]
 
 [ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="1_a3l5x"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="1_um320"]
+[ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="2_glw47"]
 [ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="2_keemd"]
+[ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="3_4wsov"]
 [ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="3_ppbiy"]
 [ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="4_c6rld"]
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_yklhy"]
@@ -9,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="7_keemd"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_keemd")]
 
 [node name="Grid" type="Node2D" parent="." unique_id=2044820807]
 script = ExtResource("1_a3l5x")
@@ -25,23 +30,25 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAA
 
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_yklhy")]
 position = Vector2(224, 160)
-color = 4
+color = 1
 
 [node name="Box2" parent="Grid" unique_id=1267091128 instance=ExtResource("5_yklhy")]
 position = Vector2(417, 477)
-color = 5
+color = 2
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_ppbiy")]
 position = Vector2(416, 352)
-color = 4
+color = 1
 
 [node name="Button2" parent="Grid" unique_id=946785190 instance=ExtResource("3_ppbiy")]
 position = Vector2(286, 290)
-color = 5
+color = 2
 
 [node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_c6rld")]
 position = Vector2(484, 481)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_o4ql5")]
 
-[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_keemd")]
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("1_um320")]
+colour_1 = ExtResource("2_glw47")
+colour_2 = ExtResource("3_4wsov")

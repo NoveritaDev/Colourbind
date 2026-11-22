@@ -1,3 +1,11 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://bo5y7lsmqogf"]
 
+[ext_resource type="Shader" uid="uid://cwrp8vxtkh3jv" path="res://assets/simulated_cvd_shaders/tint_shader.gdshader" id="1_5trpc"]
+[ext_resource type="Texture2D" uid="uid://hmatqv22kyoj" path="res://assets/textures/patterns/dots_texture.svg" id="2_3u6uk"]
+
 [resource]
+shader = ExtResource("1_5trpc")
+shader_parameter/tint = Vector3(0, 0.21, 0.21)
+shader_parameter/overlay = ExtResource("2_3u6uk")
+shader_parameter/overlay_tint = Vector3(0, 0.18, 0.18)
+shader_parameter/glint_intensity = 0.0

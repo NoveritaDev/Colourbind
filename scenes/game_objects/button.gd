@@ -3,26 +3,6 @@ extends GameObject
 
 var activated : bool
 
-@export var lms_tint: Vector3 = Vector3(1.0, 1.0, 1.0):
-	set(value):
-		lms_tint = value
-		_update_tint()
-
-@onready var sprite: Sprite2D = $Sprite2D
-@export var override_tint: bool = false:
-	set(value):
-		override_tint = value
-		_update_tint()
-
-func _update_tint() -> void:
-	if is_instance_valid(sprite):
-		if override_tint:
-			sprite.set_instance_shader_parameter("tint", lms_tint)
-			sprite.set_instance_shader_parameter("pattern_index", 0)
-		else:
-			sprite.set_instance_shader_parameter("tint", color_dict[color])
-			sprite.set_instance_shader_parameter("pattern_index", pattern_dict[color])
-
 signal s_activation(change: bool)
 
 func press() -> void:
@@ -57,5 +37,5 @@ func _ready() -> void:
 	super._ready()
 	if color == OBJ_COLOR.NONE:
 		print("This button has no color, is that on purpose?")
-	_update_tint()
+	#_update_tint()
 	GRID.s_box_moved.connect(check_for_box)

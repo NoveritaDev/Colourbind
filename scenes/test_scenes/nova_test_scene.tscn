@@ -34,7 +34,6 @@ texture = ExtResource("3_ad0pq")
 
 [node name="Box" parent="." unique_id=874453324 instance=ExtResource("4_rkinu")]
 position = Vector2(-235, -176)
-lms_tint = Vector3(0, 1, 1)
 color = 1
 
 [node name="WhiteSquare" type="Sprite2D" parent="." unique_id=234742172]

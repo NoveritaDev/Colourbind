@@ -7,8 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_w73a1"]
 [ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_tc44x"]
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="7_nsphw"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="7_s8va5"]
+[ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="8_dga24"]
+[ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="9_qxy0u"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_nsphw")]
 
 [node name="Grid" type="Node2D" parent="." unique_id=2044820807]
 script = ExtResource("1_w73a1")
@@ -26,23 +31,25 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAA
 
 [node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_w73a1")]
 position = Vector2(228, 274)
-color = 2
+color = 1
 
 [node name="Box2" parent="Grid" unique_id=1501728900 instance=ExtResource("5_w73a1")]
 position = Vector2(226, 214)
-color = 4
+color = 2
 
 [node name="Button2" parent="Grid" unique_id=2114804485 instance=ExtResource("3_v64ir")]
 position = Vector2(227, 343)
-color = 4
+color = 2
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_v64ir")]
 position = Vector2(225, 409)
-color = 2
+color = 1
 
 [node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_7vfie")]
 position = Vector2(224, 93)
 
 [node name="HUD" parent="." unique_id=446530125 instance=ExtResource("6_tc44x")]
 
-[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("7_nsphw")]
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("7_s8va5")]
+colour_1 = ExtResource("8_dga24")
+colour_2 = ExtResource("9_qxy0u")
