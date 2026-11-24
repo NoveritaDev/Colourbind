@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_yklhy"]
 [ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_o4ql5"]
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="7_keemd"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="11_4wsov"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
 
@@ -52,3 +53,5 @@ position = Vector2(484, 481)
 [node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("1_um320")]
 colour_1 = ExtResource("2_glw47")
 colour_2 = ExtResource("3_4wsov")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("11_4wsov")]

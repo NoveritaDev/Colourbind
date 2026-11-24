@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://deoliglyr7slk"]
+
+[ext_resource type="Script" uid="uid://ebasxxs40e1" path="res://scenes/move_manager.gd" id="1_hn7r3"]
+
+[node name="MoveManager" type="Node" unique_id=957101793]
+script = ExtResource("1_hn7r3")

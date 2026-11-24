@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_gfh52"]
 [ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_xu2bq"]
 [ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="11_3xk7o"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_cgg5j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cgg5j"]
 font = ExtResource("11_3xk7o")
@@ -67,3 +68,5 @@ offset_bottom = 397.0
 text = "A box can be moved even if it 
 is on the correct type of button!"
 label_settings = SubResource("LabelSettings_cgg5j")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("12_cgg5j")]

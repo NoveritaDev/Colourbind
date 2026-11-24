@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_1f7ls"]
 [ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_xdv4t"]
 [ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="11_p23lr"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_y53a8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y53a8"]
 font = ExtResource("11_p23lr")
@@ -58,3 +59,5 @@ offset_right = 675.0
 offset_bottom = 397.0
 text = "You can walk over buttons!"
 label_settings = SubResource("LabelSettings_y53a8")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("12_y53a8")]

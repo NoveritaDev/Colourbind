@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_60quq"]
 [ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_scoxs"]
 [ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="11_wmwcy"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_7m4mt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wbwik"]
 font = ExtResource("11_wmwcy")
@@ -61,3 +62,5 @@ button by walking into it
 using WASD or the arrow
 keys!"
 label_settings = SubResource("LabelSettings_wbwik")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("12_7m4mt")]

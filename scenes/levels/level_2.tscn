@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="9_brxtv"]
 [ext_resource type="Material" uid="uid://bqsdrlcsl08jx" path="res://assets/materials/colour_3.tres" id="10_tv7cl"]
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="11_nt80m"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_brxtv"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
 
@@ -62,3 +63,5 @@ position = Vector2(351, 344)
 colour_1 = ExtResource("8_nt80m")
 colour_2 = ExtResource("9_brxtv")
 colour_3 = ExtResource("10_tv7cl")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("12_brxtv")]

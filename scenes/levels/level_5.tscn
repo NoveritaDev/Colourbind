@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_6xwso"]
 [ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_5ke18"]
 [ext_resource type="Material" uid="uid://bqsdrlcsl08jx" path="res://assets/materials/colour_3.tres" id="11_j14br"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_6xwso"]
 
 [node name="Level01" type="Node2D" unique_id=615450944]
 
@@ -62,3 +63,5 @@ position = Vector2(287, 225)
 colour_1 = ExtResource("9_6xwso")
 colour_2 = ExtResource("10_5ke18")
 colour_3 = ExtResource("11_j14br")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("12_6xwso")]

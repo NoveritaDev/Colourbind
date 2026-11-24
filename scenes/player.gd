@@ -4,7 +4,9 @@ extends GameObject
 
 func move(dir: Vector2i) -> void:
 	var pos := GRID.world_to_grid(position)
+	GRID.moveManager.add_turn()
 	if GRID.push(pos + dir, dir, Pushable.MAX_PUSH_COUNT):
+		GRID.moveManager.add_move(self, dir)
 		GRID.move(self, pos + dir)
 
 	 
@@ -17,3 +19,5 @@ func _physics_process(delta: float) -> void:
 		move(Vector2i.LEFT)
 	if Input.is_action_just_pressed("move_right"):
 		move(Vector2i.RIGHT)
+	if Input.is_action_just_pressed("undo"):
+		GRID.moveManager.undo()

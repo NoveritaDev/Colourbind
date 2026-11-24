@@ -20,6 +20,7 @@ class Cell:
 
 var grid : Array[Cell]
 var buttons : Array[PushButton]
+var moveManager : MoveManager
 
 # Converts positions to 1D Array format
 func index(pos: Vector2i) -> int:
@@ -69,6 +70,18 @@ func move(obj: GameObject, new_pos: Vector2i) -> void:
 	place_at(obj, new_pos)
 	obj.position = grid_to_world(new_pos)
 
+# Transport an object from one grid cell to another
+func move_by(obj: GameObject, dir: Vector2i) -> void:
+	var obj_pos := world_to_grid(obj.position)
+	var new_pos := obj_pos + dir
+	if new_pos.x < 0 || new_pos.x >= grid_width || new_pos.y < 0 || new_pos.y >= grid_height:
+		print("Attempting to move object outside of bounds, returning")
+		return
+	
+	remove_at(obj, obj_pos)
+	place_at(obj, new_pos)
+	obj.position = grid_to_world(new_pos)
+
 # Recursive function to handle pushing "trains" of blocks
 # max_iters functions as the maximum boxes that can be pushed at once (-1 for infinite)
 func push(pos: Vector2i, dir: Vector2i, max_recurs: int) -> bool:
@@ -95,6 +108,7 @@ func push(pos: Vector2i, dir: Vector2i, max_recurs: int) -> bool:
 	
 	for obj in get_at(pos).objs:
 		if obj is Pushable:
+			moveManager.add_move(obj, dir)
 			move(obj, pos + dir)
 	
 	# Only emit the signal to check at the end of the recursion

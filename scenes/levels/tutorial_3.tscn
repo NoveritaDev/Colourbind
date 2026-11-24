@@ -11,6 +11,7 @@
 [ext_resource type="Material" uid="uid://dw7qsca1f8d0m" path="res://assets/materials/colour_1.tres" id="9_n8qik"]
 [ext_resource type="Material" uid="uid://bo5y7lsmqogf" path="res://assets/materials/colour_2.tres" id="10_i845v"]
 [ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="11_t0b5y"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_xq3uu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xq3uu"]
 font = ExtResource("11_t0b5y")
@@ -68,3 +69,5 @@ text = "Every button must have a
 matching box on it to finish 
 the level!"
 label_settings = SubResource("LabelSettings_xq3uu")
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("12_xq3uu")]
