@@ -1,16 +1,28 @@
 extends Node
 
-const LEVELS_DIR := "res://scenes/levels/"
+const LEVEL_FOLDERS := [
+	"res://scenes/levels/tutorials/",
+	"res://scenes/levels/hue/",
+	"res://scenes/levels/"
+]
 const LEVEL_SELECT := "res://scenes/ui/level_select.tscn"
 
 var levels: Array[String] = []
 var current := 0
+var sections: Array[Dictionary] = []
 
 func _ready() -> void:
-	for file in ResourceLoader.list_directory(LEVELS_DIR):
-		if file.ends_with(".tscn"):
-			levels.append(LEVELS_DIR + file)
-	levels.sort()
+	for folder in LEVEL_FOLDERS:
+		var files: Array[String] = []
+		for file in ResourceLoader.list_directory(folder):
+			if file.ends_with(".tscn"):
+				files.append(file)
+		var section := {"name": folder.trim_suffix("/").get_file(), "indices": []}
+		for file in files:
+			section["indices"].append(levels.size())
+			levels.append(folder + file)
+		if not section["indices"].is_empty():
+			sections.append(section)
 
 func load_level(index: int) -> void:
 	current = index

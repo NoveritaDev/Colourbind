@@ -23,7 +23,7 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="LevelGrid" type="GridContainer" parent="MarginContainer" unique_id=1534413240]
+[node name="Sections" type="VBoxContainer" parent="MarginContainer" unique_id=472384795]
 unique_name_in_owner = true
 layout_mode = 2
-columns = 5
+theme_override_constants/separation = 16

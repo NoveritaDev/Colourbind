@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bqps7sweikiyw"]
+
+[ext_resource type="Shader" uid="uid://cwrp8vxtkh3jv" path="res://assets/simulated_cvd_shaders/tint_shader.gdshader" id="1_tcnr1"]
+
+[resource]
+shader = ExtResource("1_tcnr1")
+shader_parameter/tint = Vector3(0.573794, 0.605319, 0.80275)
+shader_parameter/overlay_tint = Vector3(0.8, 0.8, 0.8)
+shader_parameter/glint_intensity = 0.0

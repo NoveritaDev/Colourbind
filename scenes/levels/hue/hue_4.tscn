@@ -1,0 +1,79 @@
+[gd_scene format=4 uid="uid://biklciud8yfke"]
+
+[ext_resource type="Script" uid="uid://ebasxxs40e1" path="res://scenes/move_manager.gd" id="1_uvwwp"]
+[ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="2_2lood"]
+[ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="4_qnf20"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_ywq7x"]
+[ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="6_q18wy"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="7_75jua"]
+[ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="8_h8flc"]
+[ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="8_q18wy"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="9_idfyi"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="10_g3vit"]
+[ext_resource type="Material" uid="uid://bm7umq1brlsmq" path="res://assets/materials/hues/hue4-1.tres" id="11_ywq7x"]
+[ext_resource type="Material" uid="uid://qphirbm61txa" path="res://assets/materials/hues/hue4-2.tres" id="12_q18wy"]
+[ext_resource type="Material" uid="uid://bqps7sweikiyw" path="res://assets/materials/hues/hue4-3.tres" id="13_75jua"]
+[ext_resource type="Material" uid="uid://dy2n4mjj58l26" path="res://assets/materials/hues/hue4-4.tres" id="14_h8flc"]
+
+[node name="hue-4" type="Node2D" unique_id=1177659242]
+script = ExtResource("1_uvwwp")
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("2_2lood")]
+
+[node name="Grid" type="Node2D" parent="." unique_id=966325413]
+script = ExtResource("8_q18wy")
+grid_width = 10
+grid_height = 8
+
+[node name="Background" type="ColorRect" parent="Grid" unique_id=1383611899]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("4_qnf20")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGAAAAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAIAAAAAAAUAAAAAAAIAAAAAAAYAAAAAAAIAAAAAAAcAAAAGAAEAAAABAAcAAAACAAMAAAACAAcAAAACAAMAAAADAAcAAAACAAMAAAAEAAcAAAACAAMAAAAFAAcAAAACAAMAAAAGAAcAAAAFAAEAAAAHAAcAAAACAAMAAAAIAAcAAAACAAMAAAAJAAcAAAAHAAEAAAABAAAAAAACAAMAAAACAAAAAAACAAMAAAADAAAAAAACAAMAAAAEAAAAAAACAAMAAAAFAAAAAAACAAMAAAAGAAAAAAACAAMAAAAHAAAAAAACAAMAAAAIAAAAAAACAAMAAAAJAAAAAAAHAAAAAAAJAAEAAAAAAAIAAAAJAAIAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAQAAAAAAAIAAAAJAAUAAAAAAAIAAAAJAAYAAAAAAAIAAAAGAAMAAAAAAAEAAAAGAAQAAAAAAAIAAAAGAAUAAAAAAAIAAAAGAAYAAAAAAAIAAAADAAIAAAAAAAAAAAA=")
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_ywq7x")]
+position = Vector2(160, 160)
+color = 1
+
+[node name="Box2" parent="Grid" unique_id=42512500 instance=ExtResource("5_ywq7x")]
+position = Vector2(160, 224)
+color = 2
+
+[node name="Box3" parent="Grid" unique_id=809454828 instance=ExtResource("5_ywq7x")]
+position = Vector2(160, 288)
+color = 3
+
+[node name="Box4" parent="Grid" unique_id=1550755903 instance=ExtResource("5_ywq7x")]
+position = Vector2(160, 352)
+color = 4
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("6_q18wy")]
+position = Vector2(480, 416)
+color = 1
+
+[node name="Button2" parent="Grid" unique_id=614665076 instance=ExtResource("6_q18wy")]
+position = Vector2(480, 352)
+color = 2
+
+[node name="Button3" parent="Grid" unique_id=2055092760 instance=ExtResource("6_q18wy")]
+position = Vector2(480, 288)
+color = 3
+
+[node name="Button4" parent="Grid" unique_id=1851586842 instance=ExtResource("6_q18wy")]
+position = Vector2(480, 224)
+color = 4
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("7_75jua")]
+position = Vector2(96, 160)
+
+[node name="HUD" parent="." unique_id=446530125 instance=ExtResource("8_h8flc")]
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("9_idfyi")]
+
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("10_g3vit")]
+colour_1 = ExtResource("11_ywq7x")
+colour_2 = ExtResource("12_q18wy")
+colour_3 = ExtResource("13_75jua")
+colour_4 = ExtResource("14_h8flc")

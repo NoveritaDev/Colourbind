@@ -3,6 +3,7 @@ extends Node
 @export var colour_1: Material = null
 @export var colour_2: Material = null
 @export var colour_3: Material = null
+@export var colour_4: Material = null
 var glint_index: int = 0
 var max_index: int = 0
 
@@ -25,6 +26,8 @@ func get_material(index: int) -> Material:
 		return colour_2
 	elif index == 3:
 		return colour_3
+	elif index == 4:
+		return colour_4
 	else:
 		return null
 
@@ -49,8 +52,12 @@ func _ready() -> void:
 			item.material = colour_2
 		elif item.color == GameObject.OBJ_COLOR.COLOUR_3:
 			item.material = colour_3
+		elif item.color == GameObject.OBJ_COLOR.COLOUR_4:
+			item.material = colour_4
 			
-	max_index = 3
+	max_index = 4
+	if colour_4 == null:
+		max_index = 3
 	if colour_3 == null:
 		max_index = 2
 	if colour_2 == null:
