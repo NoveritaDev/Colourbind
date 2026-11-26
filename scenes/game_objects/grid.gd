@@ -11,6 +11,13 @@ extends Node2D
 @warning_ignore("integer_division")
 @onready var tile_offset := tile_size / 2
 
+@export var camera_offset := Vector2.ZERO
+
+const BG_SOURCE_ID := 0
+const BG_ATLAS_COORDS_MAIN := Vector2i(0, 0)
+const BG_ATLAS_COORDS_ALT := Vector2i(1, 0)
+const BgPattern := preload("res://scenes/game_objects/bg_pattern.gd")
+
 signal s_box_moved
 signal s_level_won
 
@@ -21,6 +28,37 @@ class Cell:
 var grid : Array[Cell]
 var buttons : Array[PushButton]
 var moveManager : MoveManager
+
+
+# Centers camera to grid only if it does not have a set value
+func center_camera() -> void:
+	var cam := get_viewport().get_camera_2d()
+	if cam == null:
+		return
+	cam.global_position = to_global(Vector2(grid_width, grid_height) * tile_size / 2.0) + camera_offset
+	cam.force_update_scroll()
+
+
+# Fills every visible tile outside the grid with the background tile
+func fill_outside() -> void:
+	var walls: TileMapLayer = $Walls
+	var vp := get_viewport()
+	var world_rect: Rect2 = vp.get_canvas_transform().affine_inverse() * vp.get_visible_rect()
+	var top_left: Vector2i = walls.local_to_map(walls.to_local(world_rect.position)) - Vector2i.ONE
+	var bottom_right: Vector2i = walls.local_to_map(walls.to_local(world_rect.end)) + Vector2i.ONE
+	var inside := Rect2i(0, 0, grid_width, grid_height)
+
+	for y in range(top_left.y, bottom_right.y + 1):
+		for x in range(top_left.x, bottom_right.x + 1):
+			var cell := Vector2i(x, y)
+			if inside.has_point(cell):
+				continue
+			if walls.get_cell_source_id(cell) != -1:
+				continue
+			var is_alt := BgPattern.is_alt(cell)
+			var coords := BG_ATLAS_COORDS_ALT if is_alt else BG_ATLAS_COORDS_MAIN
+			walls.set_cell(cell, BG_SOURCE_ID, coords)
+
 
 # Converts positions to 1D Array format
 func index(pos: Vector2i) -> int:
@@ -155,3 +193,5 @@ func _ready() -> void:
 	$Background.position = position
 	load_grid()
 	load_grid_objs()
+	center_camera()
+	fill_outside()

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dvgea0jphi8hb"]
+
+[ext_resource type="Texture2D" uid="uid://b5b864wm58g3r" path="res://assets/textures/world/tilemap_floors.png" id="1_hxvq1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_84mp4"]
+texture = ExtResource("1_hxvq1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k8vxf"]
+sources/0 = SubResource("TileSetAtlasSource_84mp4")
+
+[node name="Floor" type="TileMapLayer" unique_id=953488113]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_k8vxf")

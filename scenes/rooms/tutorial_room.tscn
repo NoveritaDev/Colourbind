@@ -1,0 +1,73 @@
+[gd_scene format=4 uid="uid://d1lwlxvwo8mql"]
+
+[ext_resource type="Script" uid="uid://ebasxxs40e1" path="res://scenes/move_manager.gd" id="1_1lw3c"]
+[ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="1_d5wb1"]
+[ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="3_v0n2h"]
+[ext_resource type="PackedScene" uid="uid://dvgea0jphi8hb" path="res://scenes/game_objects/floor.tscn" id="4_ixejs"]
+[ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="4_k6bif"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_x63uh"]
+[ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="6_h66gu"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="7_k6bif"]
+[ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="7_v0n2h"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="8_ixejs"]
+[ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="9_vl375"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="9_ytibp"]
+[ext_resource type="Material" uid="uid://c62sn8ve51gvi" path="res://assets/materials/hues/hue1-1.tres" id="11_v0n2h"]
+[ext_resource type="Material" uid="uid://bnbj4nvrnpupy" path="res://assets/materials/hues/hue1-2.tres" id="12_ixejs"]
+[ext_resource type="Material" uid="uid://do57rb5pwt1ap" path="res://assets/materials/hues/hue1-3.tres" id="13_ytibp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_quffy"]
+font = ExtResource("9_vl375")
+font_size = 32
+
+[node name="hue-2" type="Node2D" unique_id=1177659242]
+script = ExtResource("1_1lw3c")
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("1_d5wb1")]
+
+[node name="Grid" type="Node2D" parent="." unique_id=1258619428]
+script = ExtResource("3_v0n2h")
+grid_width = 10
+grid_height = 5
+camera_offset = Vector2(0, -80)
+
+[node name="Background" type="ColorRect" parent="Grid" unique_id=1419390395]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(5.0880766, 5.0880766, 5.0880766, 1)
+
+[node name="Floor" parent="Grid" unique_id=953488113 instance=ExtResource("4_ixejs")]
+tile_map_data = PackedByteArray("AAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAABAAAAAAAGAAIAAAABAAAAAAAHAAIAAAABAAAAAAAHAAEAAAABAAAAAAAGAAEAAAABAAAAAAAIAAEAAAABAAAAAAAIAAIAAAABAAAAAAAIAAMAAAABAAAAAAAHAAMAAAABAAAAAAAGAAMAAAABAAAAAAA=")
+
+[node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("4_k6bif")]
+tile_map_data = PackedByteArray("AAAAAAAAAAACAAcAAAABAAAAAAADAAIAAAACAAAAAAAGAAAAAAADAAAAAAAHAAAAAAAGAAAAAAADAAAAAAAHAAAAAAAEAAAAAAAIAAAAAAADAAIAAAAJAAAAAAAHAAIAAAAJAAEAAAAHAAIAAAAJAAIAAAAHAAIAAAAAAAIAAAACAAcAAAAAAAEAAAACAAcAAAABAP//AAADAAEAAAACAP//AAADAAEAAAADAP//AAADAAEAAAAGAP//AAADAAEAAAAHAP//AAADAAEAAAAIAP//AAADAAEAAAAAAP//AAACAAEAAAAJAP//AAAHAAEAAAAEAP//AAAHAAEAAAAFAP//AAACAAEAAAAEAAAAAAAGAAUAAAAFAAAAAAADAAUAAAAFAAEAAAADAAYAAAAEAAEAAAAGAAYAAAAEAAMAAAAGAAQAAAAFAAMAAAADAAQAAAAFAAQAAAACAAQAAAAEAAQAAAAHAAQAAAADAAQAAAAEAAgAAAACAAQAAAAEAAgAAAABAAQAAAAEAAgAAAAGAAQAAAAFAAgAAAAHAAQAAAAFAAgAAAAIAAQAAAAFAAgAAAAJAAQAAAAHAAgAAAAJAAMAAAAHAAcAAAAAAAMAAAACAAcAAAAAAAQAAAACAAgAAAA=")
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_x63uh")]
+position = Vector2(160, 160)
+color = 1
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("6_h66gu")]
+position = Vector2(480, 160)
+color = 1
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("7_k6bif")]
+position = Vector2(96, 160)
+
+[node name="Instructions" type="Label" parent="Grid" unique_id=417394852]
+offset_left = -187.0
+offset_top = -188.0
+offset_right = 835.0
+offset_bottom = 57.0
+text = "Move the box onto the button by walking
+into it using WASD or the arrow keys!"
+label_settings = SubResource("LabelSettings_quffy")
+horizontal_alignment = 1
+
+[node name="HUD" parent="." unique_id=446530125 instance=ExtResource("7_v0n2h")]
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("8_ixejs")]
+
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("9_ytibp")]
+colour_1 = ExtResource("11_v0n2h")
+colour_2 = ExtResource("12_ixejs")
+colour_3 = ExtResource("13_ytibp")
