@@ -1,0 +1,81 @@
+[gd_scene format=4 uid="uid://bql5fv5rsbfy3"]
+
+[ext_resource type="Script" uid="uid://ebasxxs40e1" path="res://scenes/move_manager.gd" id="1_b1hw4"]
+[ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="2_8mi0s"]
+[ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="3_qgm87"]
+[ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="4_oluj7"]
+[ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="5_eb54h"]
+[ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="6_r6bnf"]
+[ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="7_jh68v"]
+[ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="8_84gri"]
+[ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="9_rwfxp"]
+[ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="10_2qvj8"]
+[ext_resource type="PackedScene" uid="uid://csfgkbaoyiysn" path="res://scenes/game_objects/SceneMaterialManager.tscn" id="11_q4go2"]
+[ext_resource type="Material" uid="uid://c62sn8ve51gvi" path="res://assets/materials/hues/hue1-1.tres" id="12_8mnex"]
+[ext_resource type="Material" uid="uid://sh4irilhl720" path="res://assets/materials/hues/hue2-2.tres" id="13_rgsim"]
+[ext_resource type="Material" uid="uid://yrrl8ieha7uw" path="res://assets/materials/hues/hue2-3.tres" id="14_gonw3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q8to2"]
+font = ExtResource("5_eb54h")
+font_size = 32
+
+[node name="hue-2" type="Node2D" unique_id=1177659242]
+script = ExtResource("1_b1hw4")
+
+[node name="CvdCamera" parent="." unique_id=1028353294 instance=ExtResource("2_8mi0s")]
+
+[node name="Grid" type="Node2D" parent="." unique_id=751343070]
+script = ExtResource("3_qgm87")
+grid_width = 10
+grid_height = 8
+
+[node name="Background" type="ColorRect" parent="Grid" unique_id=409802478]
+anchors_preset = -1
+offset_right = 567.0
+offset_bottom = 557.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+offset_transform_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("4_oluj7")]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGAAAAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAIAAAABAAAAAAACAAMAAAACAAAAAAACAAMAAAADAAAAAAACAAMAAAAEAAAAAAACAAMAAAAFAAAAAAACAAMAAAAGAAAAAAACAAMAAAAHAAAAAAACAAMAAAAAAAgAAAABAAIAAAABAAgAAAACAAIAAAACAAgAAAAFAAEAAAADAAgAAAACAAMAAAAEAAgAAAACAAMAAAAFAAgAAAACAAMAAAAGAAgAAAAFAAEAAAAHAAgAAAACAAIAAAAAAAUAAAAAAAIAAAAAAAcAAAABAAEAAAACAAcAAAADAAEAAAAGAAYAAAABAAAAAAAGAAcAAAABAAEAAAABAAcAAAACAAEAAAAHAAYAAAACAAAAAAAHAAcAAAACAAEAAAAIAAAAAAAHAAAAAAAIAAEAAAAAAAIAAAAIAAIAAAAAAAIAAAAIAAMAAAAAAAIAAAAIAAQAAAAAAAIAAAAIAAUAAAAAAAIAAAAIAAcAAAADAAEAAAAIAAgAAAADAAIAAAAAAAYAAAABAAEAAAAIAAYAAAAFAAAAAAACAAYAAAADAAAAAAABAAYAAAACAAAAAAA=")
+
+[node name="Instructions" type="Label" parent="Grid/Walls" unique_id=1357273926]
+offset_left = 597.0
+offset_top = 204.0
+offset_right = 1139.0
+offset_bottom = 387.0
+text = "If you get stuck, you 
+can restart by 
+pressing 'R'"
+label_settings = SubResource("LabelSettings_q8to2")
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("6_r6bnf")]
+position = Vector2(372, 260)
+color = 1
+
+[node name="Box2" parent="Grid" unique_id=42512500 instance=ExtResource("6_r6bnf")]
+position = Vector2(171, 281)
+color = 2
+
+[node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("7_jh68v")]
+position = Vector2(288, 416)
+color = 1
+
+[node name="Button2" parent="Grid" unique_id=614665076 instance=ExtResource("7_jh68v")]
+position = Vector2(288, 480)
+color = 2
+
+[node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("8_84gri")]
+position = Vector2(288, 160)
+
+[node name="HUD" parent="." unique_id=446530125 instance=ExtResource("9_rwfxp")]
+
+[node name="MoveManager" parent="." unique_id=957101793 instance=ExtResource("10_2qvj8")]
+
+[node name="SceneMaterialManager" parent="." unique_id=964364232 instance=ExtResource("11_q4go2")]
+colour_1 = ExtResource("12_8mnex")
+colour_2 = ExtResource("13_rgsim")
+colour_3 = ExtResource("14_gonw3")
