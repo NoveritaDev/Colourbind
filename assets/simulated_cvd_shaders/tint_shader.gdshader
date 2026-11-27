@@ -93,6 +93,8 @@ void fragment() {
 	float glint_power = smoothstep(pos - glint_width, pos, diag) - smoothstep(pos, pos + glint_width, diag);
 	mixed += vec3(1,1,1) * glint_intensity * glint_power;
 	
+	mixed *= 1.5;
+	
 	mixed = clamp(mixed, 0, 1);
 	
 	COLOR = vec4(mixed, base_colour.a);
