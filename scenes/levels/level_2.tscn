@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="1_g0d3o"]
 [ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="2_gvckh"]
 [ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="3_ohkgf"]
-[ext_resource type="PackedScene" uid="uid://dvgea0jphi8hb" path="res://scenes/game_objects/floor.tscn" id="3_tv7cl"]
 [ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="4_rwlrc"]
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_1hglp"]
 [ext_resource type="PackedScene" uid="uid://c8tvnqlumv3n7" path="res://scenes/ui/hud.tscn" id="6_50wog"]
@@ -13,6 +12,7 @@
 [ext_resource type="Material" uid="uid://bqsdrlcsl08jx" path="res://assets/materials/colour_3.tres" id="10_tv7cl"]
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="11_nt80m"]
 [ext_resource type="PackedScene" uid="uid://deoliglyr7slk" path="res://scenes/move_manager.tscn" id="12_brxtv"]
+[ext_resource type="PackedScene" uid="uid://bwnco00y4ru0f" path="res://scenes/game_objects/background.tscn" id="13_kop93"]
 
 [node name="level_2" type="Node2D" unique_id=615450944]
 
@@ -23,16 +23,10 @@ script = ExtResource("1_g0d3o")
 grid_width = 7
 grid_height = 8
 
-[node name="Background" type="ColorRect" parent="Grid" unique_id=978619325]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.23031491, 0.23031494, 0.23031494, 1)
-
-[node name="Floor" parent="Grid" unique_id=953488113 instance=ExtResource("3_tv7cl")]
-tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAABAAAAAAADAAEAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAACAAUAAAAAAAAAAAACAAMAAAAAAAAAAAACAAYAAAAAAAAAAAABAAUAAAAAAAAAAAADAAUAAAABAAAAAAAEAAAAAAABAAAAAAA=")
+[node name="Background" parent="Grid" unique_id=978619325 instance=ExtResource("13_kop93")]
 
 [node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_gvckh")]
-tile_map_data = PackedByteArray("AAAAAAIAAAACAAIAAAAAAAMAAAACAAIAAAAAAAQAAAACAAIAAAABAAEAAAAFAAAAAAAAAAEAAAACAAIAAAAAAAAAAAACAAEAAAABAAAAAAADAAEAAAACAAEAAAADAAYAAAACAAAAAAADAAUAAAACAP//AAACAAEAAAADAP//AAADAAEAAAAEAP//AAADAAEAAAADAAAAAAADAAIAAAAFAAAAAAAHAAMAAAAGAAQAAAAHAAYAAAAAAAUAAAACAAcAAAAFAAEAAAAHAAMAAAAGAAUAAAAHAAgAAAAFAP//AAAHAAUAAAAEAAEAAgAAAAcAAAAEAAAAAgAAAAYAAAAFAAIAAAAGAAUAAAAFAAMAAAAGAAYAAAAGAAIAAAAHAAUAAAAGAAMAAAAHAAYAAAAFAAUAAAAGAAQAAAAFAAYAAAAHAAQAAAAEAAYAAAAGAAgAAAADAAYAAAAGAAQAAAADAAcAAAAHAAgAAAACAAcAAAAFAAgAAAABAAcAAAACAAgAAAABAAYAAAADAAQAAAAAAAYAAAACAAgAAAADAAUAAgAGAAoAAAAAAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAIAAAABAAEAAAACAAMAAAAAAAEAAAAGAAAAAAACAAEAAAAHAAEAAAACAAAAAAAGAAAAAAADAAAAAAACAAMAAAAGAAQAAAAAAAIAAAAAAAUAAAAAAAIAAAAFAAEAAAAHAAAAAAAGAAUAAAAHAAEAAAAEAAEAAAAGAAEAAAAEAAAAAAAHAAAAAAAFAAIAAAAAAAIAAAAFAAMAAAAGAAEAAAAGAAMAAAAHAAAAAAAFAAUAAAAGAAAAAAAFAAYAAAAHAAEAAAAEAAYAAAACAAMAAAADAAYAAAAEAAEAAAADAAcAAAAHAAEAAAACAAcAAAACAAMAAAABAAcAAAAGAAEAAAABAAYAAAAHAAAAAAAAAAYAAAAGAAEAAAADAAUAAAAAAAEAAAA=")
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_ohkgf")]
 position = Vector2(352, 288)
