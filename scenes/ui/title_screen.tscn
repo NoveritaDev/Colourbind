@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://g1gysekn7d2k"]
+
+[ext_resource type="Script" uid="uid://dpu5q7fcl3c5g" path="res://scripts/TitleScreen.gd" id="1_eb34j"]
+[ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="2_aqpy5"]
+[ext_resource type="Shader" uid="uid://lqowtwjdxdfk" path="res://assets/simulated_cvd_shaders/multi_cvd.gdshader" id="4_r23qo"]
+[ext_resource type="Script" uid="uid://cerpbqwv00btj" path="res://scripts/cvd_cam_cycle.gd" id="5_r23qo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cfe2f"]
+shader = ExtResource("4_r23qo")
+shader_parameter/cvd_type = 0
+
+[node name="TitleScreen" type="Control" unique_id=832944731]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eb34j")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1829139852]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -16.0
+offset_right = 1216.0
+offset_bottom = 696.0
+color = Color(0.7176471, 0.7529412, 0.93333334, 1)
+
+[node name="Level Select" type="Button" parent="." unique_id=647589195]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 440.0
+offset_right = 677.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 24
+text = "Level Select
+"
+
+[node name="Start" type="Button" parent="." unique_id=464156865]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 440.0
+offset_right = 308.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 24
+text = "Start"
+
+[node name="Settings" type="Button" parent="." unique_id=403088342]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 440.0
+offset_right = 1060.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 24
+text = "Settings
+"
+
+[node name="Title" type="ColorRect" parent="." unique_id=1263170393]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 1040.0
+offset_bottom = 304.0
+color = Color(1, 1, 1, 0)
+
+[node name="C" type="Label" parent="Title" unique_id=894502543]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 635.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0.2, 0.047058824, 0.18431373, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.62352943)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "C"
+
+[node name="O" type="Label" parent="Title" unique_id=1770945928]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 715.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.48235294, 0.15686275, 0.49019608, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "O"
+
+[node name="L" type="Label" parent="Title" unique_id=141264043]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 8.0
+offset_right = 707.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.4392157, 0.40392157, 0.8117647, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "L"
+
+[node name="O2" type="Label" parent="Title" unique_id=606381832]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 8.0
+offset_right = 675.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.27450982, 0.5921569, 0.7294118, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "O"
+
+[node name="U" type="Label" parent="Title" unique_id=1802998976]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 8.0
+offset_right = 571.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0.48235294, 0.15686275, 0.49019608, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "U"
+
+[node name="R" type="Label" parent="Title" unique_id=1575206391]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 8.0
+offset_right = 747.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.4822746, 0.45775273, 0.6993055, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "R"
+
+[node name="B" type="Label" parent="Title" unique_id=1226775321]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 8.0
+offset_right = 827.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.27450982, 0.5921569, 0.7294118, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "B"
+
+[node name="I" type="Label" parent="Title" unique_id=2013318247]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 8.0
+offset_right = 907.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.48235294, 0.15686275, 0.49019608, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "I"
+
+[node name="N" type="Label" parent="Title" unique_id=985158755]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 8.0
+offset_right = 939.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.4392157, 0.40392157, 0.8117647, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "N"
+
+[node name="D" type="Label" parent="Title" unique_id=2059792020]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 8.0
+offset_right = 1027.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.2, 0.047058824, 0.18431373, 1)
+theme_override_fonts/font = ExtResource("2_aqpy5")
+theme_override_font_sizes/font_size = 100
+text = "D"
+
+[node name="cvd_cam_cycle" type="Camera2D" parent="." unique_id=991050152]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="cvd_cam_cycle" unique_id=317821271]
+layer = 128
+script = ExtResource("5_r23qo")
+
+[node name="Timer" type="Timer" parent="cvd_cam_cycle/CanvasLayer" unique_id=1271732128]
+
+[node name="ColorRect" type="ColorRect" parent="cvd_cam_cycle/CanvasLayer" unique_id=1488888079]
+material = SubResource("ShaderMaterial_cfe2f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 200.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TitleTheme" type="AudioStreamPlayer2D" parent="." unique_id=1790679072]
+
+[connection signal="pressed" from="Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Colourbind"
-run/main_scene="uid://q5gjwqygcn4k"
+run/main_scene="uid://g1gysekn7d2k"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
