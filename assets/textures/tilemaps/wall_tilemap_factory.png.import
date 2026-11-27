@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8g4q2brr2s1c"
-path="res://.godot/imported/WhiteCircle.png-5c5b6c3384f029d4d41af8e878c795ab.ctex"
+uid="uid://tql7e56hexej"
+path="res://.godot/imported/wall_tilemap_factory.png-831fe0d1c76654895456c2ae4854318e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/WhiteCircle.png"
-dest_files=["res://.godot/imported/WhiteCircle.png-5c5b6c3384f029d4d41af8e878c795ab.ctex"]
+source_file="res://assets/textures/tilemaps/wall_tilemap_factory.png"
+dest_files=["res://.godot/imported/wall_tilemap_factory.png-831fe0d1c76654895456c2ae4854318e.ctex"]
 
 [params]
 
