@@ -1,9 +1,9 @@
-[gd_resource type="ShaderMaterial" format=3 uid="uid://biq1pds7ygj70"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c62sn8ve51gvi"]
 
-[ext_resource type="Shader" uid="uid://cwrp8vxtkh3jv" path="res://assets/simulated_cvd_shaders/tint_shader.gdshader" id="1_fm1ok"]
+[ext_resource type="Shader" uid="uid://cwrp8vxtkh3jv" path="res://assets/simulated_cvd_shaders/tint_shader.gdshader" id="1_p5epr"]
 
 [resource]
-shader = ExtResource("1_fm1ok")
-shader_parameter/tint = Vector3(0.453218, 0.4732, 0.815725)
+shader = ExtResource("1_p5epr")
+shader_parameter/tint = Vector3(0.320765, 0.332604, 0.087008)
 shader_parameter/overlay_tint = Vector3(0.8, 0.8, 0.8)
 shader_parameter/glint_intensity = 0.0

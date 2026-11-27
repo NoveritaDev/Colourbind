@@ -10,8 +10,13 @@ func _ready() -> void:
 
 # Cannot close menu when the level is completed
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and settings_menu.visible and not won:
+	if event.is_action_pressed("settings") and settings_menu.visible and not won:
 		close_settings()
+	elif event.is_action_pressed("settings") and not settings_menu.visible and not won:
+		open_settings()
+
+	if event.is_action_pressed("restart"):
+		LevelManager.restart()
 
 func _on_level_won() -> void:
 	won = true

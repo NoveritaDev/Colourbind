@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://dw7qsca1f8d0m"]
 
 [ext_resource type="Shader" uid="uid://cwrp8vxtkh3jv" path="res://assets/simulated_cvd_shaders/tint_shader.gdshader" id="1_l8tl8"]
-[ext_resource type="Texture2D" uid="uid://s7u1j812c01i" path="res://assets/textures/patterns/hatching.svg" id="2_5k31u"]
+[ext_resource type="Texture2D" uid="uid://xkgin2la6i7v" path="res://assets/textures/patterns/stripes.png" id="2_5k31u"]
 
 [resource]
 shader = ExtResource("1_l8tl8")

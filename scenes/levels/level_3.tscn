@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2gww3woy0ukh" path="res://scenes/game_objects/cvd_camera.tscn" id="1_cw75u"]
 [ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="1_ypi4k"]
 [ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="2_cw75u"]
+[ext_resource type="PackedScene" uid="uid://dvgea0jphi8hb" path="res://scenes/game_objects/floor.tscn" id="3_f6egh"]
 [ext_resource type="PackedScene" uid="uid://d28b4nu3hm2ji" path="res://scenes/game_objects/button.tscn" id="3_gkpor"]
 [ext_resource type="PackedScene" uid="uid://bb7yi4mxkv7q3" path="res://scenes/player.tscn" id="4_a0uur"]
 [ext_resource type="PackedScene" uid="uid://cuqomjcc84dsx" path="res://scenes/game_objects/box.tscn" id="5_yy4na"]
@@ -27,32 +28,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.23031491, 0.23031494, 0.23031494, 1)
 
+[node name="Floor" parent="Grid" unique_id=953488113 instance=ExtResource("3_f6egh")]
+tile_map_data = PackedByteArray("AAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAADAAMAAAAAAAAAAAADAAIAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAA=")
+
 [node name="Walls" parent="Grid" unique_id=848851813 instance=ExtResource("2_cw75u")]
-tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAAIAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAIAAEAAQAAAAAAAAACAAEAAQAAAAAAAAACAAIAAQAAAAAAAAABAAIAAQAAAAAAAAABAAEAAQAAAAAAAAAFAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAADAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAA=")
-
-[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_yy4na")]
-position = Vector2(221, 346)
-color = 1
-
-[node name="Box2" parent="Grid" unique_id=1129021981 instance=ExtResource("5_yy4na")]
-position = Vector2(219, 281)
-color = 1
-
-[node name="Box3" parent="Grid" unique_id=173298822 instance=ExtResource("5_yy4na")]
-position = Vector2(407, 348)
-color = 2
-
-[node name="Box4" parent="Grid" unique_id=205159485 instance=ExtResource("5_yy4na")]
-position = Vector2(407, 287)
-color = 2
-
-[node name="Box5" parent="Grid" unique_id=292138077 instance=ExtResource("5_yy4na")]
-position = Vector2(348, 230)
-color = 3
-
-[node name="Box6" parent="Grid" unique_id=377790754 instance=ExtResource("5_yy4na")]
-position = Vector2(279, 230)
-color = 3
+tile_map_data = PackedByteArray("AAAAAAEAAAACAAEAAAAAAAIAAAACAAMAAAAAAAMAAAACAAMAAAAAAAQAAAACAAMAAAAAAAUAAAACAAMAAAAAAAYAAAACAAgAAAABAAYAAAADAAgAAAACAAYAAAADAAgAAAADAAYAAAADAAQAAAAGAAYAAAAGAAQAAAAHAAYAAAAGAAgAAAAIAAYAAAAGAAgAAAAJAAUAAAAHAAcAAAAJAAQAAAAHAAcAAAAJAAMAAAAHAAcAAAAJAAEAAAAHAAUAAAAHAAAAAAAHAAMAAAAGAAAAAAAGAAIAAAAFAAAAAAAGAAIAAAAEAAAAAAAGAAIAAAADAAAAAAAGAAIAAAACAAAAAAACAAIAAAAIAAIAAAAHAAAAAAAHAAIAAAAGAAAAAAAHAAEAAAAGAAUAAAAIAAEAAAAFAAEAAAACAAEAAAADAAUAAAACAAIAAAAHAAAAAAABAAIAAAAGAAAAAAABAAEAAAAEAAEAAAAFAAcAAAAEAAgAAAAEAAcAAAAEAAgAAAADAAcAAAACAAgAAAAGAAcAAAAHAAgAAAAJAAYAAAAHAAgAAAAJAAIAAAAHAAYAAAAHAP//AAAHAAEAAAAGAP//AAAFAAEAAAAFAP//AAAFAAEAAAAEAP//AAAFAAEAAAADAP//AAAFAAEAAAACAP//AAACAAEAAAA=")
 
 [node name="Button" parent="Grid" unique_id=1203081120 instance=ExtResource("3_gkpor")]
 position = Vector2(541, 288)
@@ -76,6 +56,30 @@ color = 3
 
 [node name="Button6" parent="Grid" unique_id=382950479 instance=ExtResource("3_gkpor")]
 position = Vector2(281, 349)
+color = 3
+
+[node name="Box" parent="Grid" unique_id=874453324 instance=ExtResource("5_yy4na")]
+position = Vector2(221, 346)
+color = 1
+
+[node name="Box2" parent="Grid" unique_id=1129021981 instance=ExtResource("5_yy4na")]
+position = Vector2(219, 281)
+color = 1
+
+[node name="Box3" parent="Grid" unique_id=173298822 instance=ExtResource("5_yy4na")]
+position = Vector2(407, 348)
+color = 2
+
+[node name="Box4" parent="Grid" unique_id=205159485 instance=ExtResource("5_yy4na")]
+position = Vector2(407, 287)
+color = 2
+
+[node name="Box5" parent="Grid" unique_id=292138077 instance=ExtResource("5_yy4na")]
+position = Vector2(348, 230)
+color = 3
+
+[node name="Box6" parent="Grid" unique_id=377790754 instance=ExtResource("5_yy4na")]
+position = Vector2(279, 230)
 color = 3
 
 [node name="Player" parent="Grid" unique_id=187205818 instance=ExtResource("4_a0uur")]
