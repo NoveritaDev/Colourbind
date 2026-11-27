@@ -2,13 +2,11 @@
 
 [ext_resource type="Script" uid="uid://p2lbfpwpu5mb" path="res://scenes/game_objects/grid.gd" id="1_sr5c7"]
 [ext_resource type="PackedScene" uid="uid://qg88fdcrj6sy" path="res://scenes/game_objects/walls.tscn" id="2_sg3kw"]
+[ext_resource type="PackedScene" uid="uid://bwnco0zy4ruzf" path="res://scenes/game_objects/background.tscn" id="3_em7tc"]
 
 [node name="Grid" type="Node2D" unique_id=2044820807]
 script = ExtResource("1_sr5c7")
 
-[node name="Background" type="ColorRect" parent="." unique_id=978619325]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.23031491, 0.23031494, 0.23031494, 1)
+[node name="Background" parent="." unique_id=978619325 instance=ExtResource("3_em7tc")]
 
 [node name="Walls" parent="." unique_id=848851813 instance=ExtResource("2_sg3kw")]

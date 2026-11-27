@@ -93,7 +93,7 @@ void fragment() {
 	float glint_power = smoothstep(pos - glint_width, pos, diag) - smoothstep(pos, pos + glint_width, diag);
 	mixed += vec3(1,1,1) * glint_intensity * glint_power;
 	
-	mixed *= 1.5;
+	mixed *= (255.0/179.0); // 179 is the grey of the borker
 	
 	mixed = clamp(mixed, 0, 1);
 	
