@@ -21,19 +21,33 @@ grow_vertical = 2
 script = ExtResource("1_eb34j")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1829139852]
-layout_mode = 0
-offset_left = -40.0
-offset_top = -16.0
-offset_right = 1216.0
-offset_bottom = 696.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -628.0
+offset_top = -356.0
+offset_right = 628.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.7176471, 0.7529412, 0.93333334, 1)
 
 [node name="Level Select" type="Button" parent="." unique_id=647589195]
-layout_mode = 0
-offset_left = 472.0
-offset_top = 440.0
-offset_right = 677.0
-offset_bottom = 514.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -208.0
+offset_right = 128.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_aqpy5")
 theme_override_font_sizes/font_size = 24
 text = "Level Select
@@ -41,31 +55,38 @@ text = "Level Select
 
 [node name="Start" type="Button" parent="." unique_id=464156865]
 layout_mode = 0
-offset_left = 104.0
+offset_left = 88.0
 offset_top = 440.0
-offset_right = 308.0
-offset_bottom = 514.0
+offset_right = 328.0
+offset_bottom = 520.0
 theme_override_fonts/font = ExtResource("2_aqpy5")
 theme_override_font_sizes/font_size = 24
 text = "Start"
 
 [node name="Settings" type="Button" parent="." unique_id=403088342]
 layout_mode = 0
-offset_left = 856.0
+offset_left = 824.0
 offset_top = 440.0
-offset_right = 1060.0
-offset_bottom = 514.0
+offset_right = 1064.0
+offset_bottom = 520.0
 theme_override_fonts/font = ExtResource("2_aqpy5")
 theme_override_font_sizes/font_size = 24
 text = "Settings
 "
 
 [node name="Title" type="ColorRect" parent="." unique_id=1263170393]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 128.0
-offset_right = 1040.0
-offset_bottom = 304.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = -196.0
+offset_right = 456.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
 [node name="C" type="Label" parent="Title" unique_id=894502543]
@@ -193,7 +214,7 @@ material = SubResource("ShaderMaterial_cfe2f")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -80.0
+offset_left = -136.0
 offset_top = -40.0
 offset_right = 200.0
 offset_bottom = 80.0
@@ -203,6 +224,7 @@ mouse_filter = 2
 
 [node name="TitleTheme" type="AudioStreamPlayer2D" parent="." unique_id=1790679072]
 stream = ExtResource("5_cfe2f")
+autoplay = true
 
 [node name="SelectSound" type="AudioStreamPlayer2D" parent="." unique_id=1553000229]
 stream = ExtResource("6_cfe2f")

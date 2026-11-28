@@ -7,7 +7,7 @@ extends Control
 @onready var select_sound: AudioStreamPlayer2D = $SelectSound
 
 func _ready() -> void:
-	title_theme.play(0.75)
+	title_theme.play(1.0)
 
 func _on_start_pressed() -> void:
 	# CHANGE TO INTRO CUTSCENE
