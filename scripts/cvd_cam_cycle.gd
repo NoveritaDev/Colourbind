@@ -11,6 +11,8 @@ func _ready() -> void:
 		cvd_change()
 
 func cvd_change() -> void:
+	if Globals.stop_cvd_cycle == true:
+		return
 	current_mode = (current_mode + 1) % MODE_NAMES.size()
 	var mat := filter_rect.material as ShaderMaterial
 	if mat:

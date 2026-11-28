@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpp6vgrpu45jg"
+path="res://.godot/imported/42. Save Game - Episode Concluded.mp3-f8b7fc811ce17feb688965c2f0b3632c.mp3str"
+
+[deps]
+
+source_file="res://scenes/ui/42. Save Game - Episode Concluded.mp3"
+dest_files=["res://.godot/imported/42. Save Game - Episode Concluded.mp3-f8b7fc811ce17feb688965c2f0b3632c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

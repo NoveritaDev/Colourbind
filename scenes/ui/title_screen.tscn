@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://dpu5q7fcl3c5g" path="res://scripts/TitleScreen.gd" id="1_eb34j"]
 [ext_resource type="FontFile" uid="uid://b5bn34o3h4i00" path="res://assets/fonts/OpenDyslexic-Regular.otf" id="2_aqpy5"]
 [ext_resource type="Shader" uid="uid://lqowtwjdxdfk" path="res://assets/simulated_cvd_shaders/multi_cvd.gdshader" id="4_r23qo"]
+[ext_resource type="AudioStream" uid="uid://3ddcyvn8saca" path="res://assets/audio/TitleTheme.mp3" id="5_cfe2f"]
 [ext_resource type="Script" uid="uid://cerpbqwv00btj" path="res://scripts/cvd_cam_cycle.gd" id="5_r23qo"]
+[ext_resource type="AudioStream" uid="uid://pspxjw6ll4pr" path="res://assets/audio/SelectSound.mp3" id="6_cfe2f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cfe2f"]
 shader = ExtResource("4_r23qo")
@@ -200,6 +202,10 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="TitleTheme" type="AudioStreamPlayer2D" parent="." unique_id=1790679072]
+stream = ExtResource("5_cfe2f")
+
+[node name="SelectSound" type="AudioStreamPlayer2D" parent="." unique_id=1553000229]
+stream = ExtResource("6_cfe2f")
 
 [connection signal="pressed" from="Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
